@@ -4,7 +4,7 @@
 ```go
 /*
 type Route struct { // the path is "/"
-
+	// 空结构体
 }
 */
 
@@ -16,7 +16,7 @@ type RouteApple struct { // the path is "/apple/:kind"
 type RouteAppleGet struct { // the path is "/apple/:kind/get/:number"
 	RouteApple `url:"get"`
 	number string
-	nni.GET
+	nni.GET // 这个 GET 指 http request method。是空结构体
 }
 
 func TestExample1(t *testing.T){
